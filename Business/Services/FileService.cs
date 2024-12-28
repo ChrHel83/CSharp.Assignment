@@ -2,22 +2,22 @@
 
 public class FileService
 {
-    private readonly string _directoryPath;
+    private readonly string _directoryName;
     private readonly string _filePath;
 
-    public FileService(string directoryPath = "Data", string fileName = "contactList.json")
+    public FileService(string directoryName = "Json_lists", string fileName = "contactList.json")
     {
-        _directoryPath = directoryPath;
-        _filePath = Path.Combine(directoryPath, fileName);
+        _directoryName = directoryName;
+        _filePath = Path.Combine(directoryName, fileName);
 
     }
     public void SaveContentToFile(string content)
     {
         if (!string.IsNullOrEmpty(content))
         {
-            if (!Directory.Exists(_directoryPath))
+            if (!Directory.Exists(_directoryName))
             {
-                Directory.CreateDirectory(_directoryPath);
+                Directory.CreateDirectory(_directoryName);
             }
 
             File.WriteAllText(_filePath, content);

@@ -74,7 +74,7 @@ public class MenuDialogs
         contact.City = Console.ReadLine()!;
 
         _contactService.CreateContact(contact);
-
+        Console.WriteLine("Tryck på valfri tangent för att återgå till huvudmenyn...");
         Console.ReadKey();
     }
 
@@ -85,6 +85,7 @@ public class MenuDialogs
 
         Console.Clear();
         Console.WriteLine("**** Visa alla kontakter ****");
+        Console.WriteLine("");
         if (hasError)
         {
             OutputDialog("Något gick fel. Försök igen senare");
