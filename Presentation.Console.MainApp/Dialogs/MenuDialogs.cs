@@ -1,7 +1,7 @@
 ﻿using Business.Models;
 using Business.Services;
 using System;
-
+// En liten kommentar
 namespace Presentation.ConsoleApp.Main.Dialogs;
 
 public class MenuDialogs
@@ -19,7 +19,7 @@ public class MenuDialogs
             Console.WriteLine(" 1. Lägg till kontakt");
             Console.WriteLine(" 2. Visa alla kontakter");
             Console.WriteLine(" 3. Redigera kontakt");
-            Console.WriteLine(" Q. Avsluta applikation");
+            Console.WriteLine(" Q. Avsluta applikationen");
             Console.WriteLine("*******************************");
             Console.Write(" Menyval: ");
 
@@ -43,7 +43,7 @@ public class MenuDialogs
 
                 case "q":
                     Console.Clear();
-                    OutputDialog("Tryck på någon tangent för att avsluta");
+                    OutputDialog("Tryck på någon tangent för att avsluta applikationen");
                     isRunning = false;
                     break;
 
@@ -58,7 +58,7 @@ public class MenuDialogs
     {
         var contact = new ContactModel();
         Console.WriteLine("****** Lägg till kontakt ******");
-        Console.Write(" Ange Förnamn:");
+        Console.Write(" Ange Förnamn: ");
         contact.FirstName = Console.ReadLine()!;
         Console.Write(" Ange Efternamn:");
         contact.LastName = Console.ReadLine()!;
@@ -66,7 +66,7 @@ public class MenuDialogs
         contact.Email = Console.ReadLine()!;
         Console.Write(" Ange telefonnummer: ");
         contact.Phone = Console.ReadLine()!;
-        Console.Write(" Ange gatuadress:");
+        Console.Write(" Ange gatuadress: ");
         contact.StreetAddress = Console.ReadLine()!;
         Console.Write(" Ange postnummer: ");
         contact.ZIPCode = Console.ReadLine()!;
@@ -98,20 +98,26 @@ public class MenuDialogs
             return;
         }
 
-        foreach(var contact in contacts)
+        foreach (var contact in contacts)
         {
-            Console.WriteLine($"# {contact.Id}");
-            Console.WriteLine($"Namn: {contact.FirstName} {contact.LastName}");
-            Console.WriteLine($"Epost: {contact.Email}");
-            Console.WriteLine($"Telefon: {contact.Phone}");
-            Console.WriteLine($"Adress: {contact.StreetAddress}");
-            Console.WriteLine($"Postnummer: {contact.ZIPCode}");
-            Console.WriteLine($"Stad: {contact.City}");
-            Console.WriteLine("----------------------------------------");
+            Console.Write($"{contact.FirstName} {contact.LastName}");
+            Console.Write("   ");
+            Console.Write(contact.Email);
+            Console.Write("   ");
+            Console.Write(contact.Phone);
+            Console.Write("   ");
+            Console.Write(contact.StreetAddress);
+            Console.Write(", ");
+            Console.Write(contact.ZIPCode);
+            Console.Write(" ");
+            Console.WriteLine(contact.City);
+            Console.WriteLine(new string('-', 100));
         }
+
 
         Console.ReadKey();
     }
+
     public void ShowEditContact()
     {
         Console.WriteLine("Redigera kontakter");
