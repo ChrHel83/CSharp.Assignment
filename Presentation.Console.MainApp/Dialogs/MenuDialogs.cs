@@ -43,7 +43,7 @@ public class MenuDialogs
 
                 case "q":
                     Console.Clear();
-                    OutputDialog("Tryck på någon tangent för att avsluta");
+                    OutputDialog("Tryck på någon tangent för att avsluta applikationen");
                     isRunning = false;
                     break;
 
