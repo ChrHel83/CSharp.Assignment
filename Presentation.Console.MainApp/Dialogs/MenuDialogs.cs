@@ -1,7 +1,7 @@
 ﻿using Business.Models;
 using Business.Services;
 using System;
-
+// En liten kommentar
 namespace Presentation.ConsoleApp.Main.Dialogs;
 
 public class MenuDialogs
@@ -19,7 +19,7 @@ public class MenuDialogs
             Console.WriteLine(" 1. Lägg till kontakt");
             Console.WriteLine(" 2. Visa alla kontakter");
             Console.WriteLine(" 3. Redigera kontakt");
-            Console.WriteLine(" Q. Avsluta applikation");
+            Console.WriteLine(" Q. Avsluta applikationen");
             Console.WriteLine("*******************************");
             Console.Write(" Menyval: ");
 
