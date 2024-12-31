@@ -12,6 +12,14 @@ public class ContactService
     {
         _contactList.Add(model);
 
+        //var json = JsonSerializer.Serialize(_contactList);
+        //_fileService.SaveContentToFile(json);
+
+        //UpdateContactList();
+    }
+
+    public void UpdateContactList()
+    {
         var json = JsonSerializer.Serialize(_contactList);
         _fileService.SaveContentToFile(json);
     }

@@ -74,6 +74,7 @@ public class MenuDialogs
         contact.City = Console.ReadLine()!;
 
         _contactService.CreateContact(contact);
+        _contactService.UpdateContactList();
         Console.WriteLine("Tryck på valfri tangent för att återgå till huvudmenyn...");
         Console.ReadKey();
     }
@@ -100,6 +101,7 @@ public class MenuDialogs
 
         foreach (var contact in contacts)
         {
+            Console.WriteLine(contact.Id);
             Console.Write($"{contact.FirstName} {contact.LastName}");
             Console.Write("   ");
             Console.Write(contact.Email);
