@@ -1,7 +1,7 @@
 ﻿using Business.Models;
 using Business.Services;
 using System;
-// En liten kommentar
+
 namespace Presentation.ConsoleApp.Main.Dialogs;
 
 public class MenuDialogs

@@ -5,7 +5,7 @@ public class FileService
     private readonly string _directoryName;
     private readonly string _filePath;
 
-    public FileService(string directoryName = "Json_lists", string fileName = "contactList.json")
+    public FileService(string directoryName = "JSONdata", string fileName = "contacts.json")
     {
         _directoryName = directoryName;
         _filePath = Path.Combine(directoryName, fileName);

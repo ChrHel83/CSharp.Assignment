@@ -21,7 +21,7 @@ public class ContactService
         hasError = false;
         var json = _fileService.GetContentFromFile();
 
-        if(!string.IsNullOrEmpty(json) )
+        if (!string.IsNullOrEmpty(json))
         {
             try
             {
